@@ -10,6 +10,7 @@ const preview: Preview = {
 				date: /Date$/
 			}
 		},
+		themes: themes.dark,
 		docs: {
 			theme: themes.dark
 		}
