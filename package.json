@@ -1,6 +1,6 @@
 {
 	"name": "planejape-ui-svelte",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build && npm run package",
@@ -65,6 +65,5 @@
 	"svelte": "./dist/index.js",
 	"types": "./dist/index.d.ts",
 	"type": "module",
-	"readme": "ERROR: No README data found!",
-	"_id": "planejape-ui-svelte/svelte@0.0.1"
+	"readme": "ERROR: No README data found!"
 }
