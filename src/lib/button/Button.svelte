@@ -30,6 +30,6 @@
 	{style}
 	on:click
 >
-	teste de build
+	teste de build build 2
 	{label}
 </button>

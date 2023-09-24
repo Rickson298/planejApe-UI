@@ -26,7 +26,8 @@
 		"dist",
 		"!dist/**/*.test.*",
 		"!dist/**/*.spec.*",
-		"!dist/**/*.stories.*"
+		"!dist/**/*.stories.*",
+		"!dist/**/*.mdx*"
 	],
 	"peerDependencies": {
 		"svelte": "^4.0.0"
@@ -50,6 +51,7 @@
 		"eslint-config-prettier": "^8.5.0",
 		"eslint-plugin-storybook": "^0.6.13",
 		"eslint-plugin-svelte": "^2.30.0",
+		"phosphor-svelte": "^1.3.0",
 		"prettier": "^2.8.0",
 		"prettier-plugin-svelte": "^2.10.1",
 		"publint": "^0.1.9",
