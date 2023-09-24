@@ -65,5 +65,8 @@
 	"svelte": "./dist/index.js",
 	"types": "./dist/index.d.ts",
 	"type": "module",
-	"readme": "ERROR: No README data found!"
+	"readme": "ERROR: No README data found!",
+	"dependencies": {
+		"polished": "^4.2.2"
+	}
 }
