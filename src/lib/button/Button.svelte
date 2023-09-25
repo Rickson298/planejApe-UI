@@ -25,6 +25,7 @@
 		cursor: pointer;
 		display: flex;
 		gap: 0.5rem;
+		height: fit-content;
 
 		&:hover {
 			filter: brightness(0.9);
