@@ -1,35 +1,37 @@
 <script lang="ts">
-	import './button.css';
+	import type { HTMLAttributes } from 'svelte/elements';
 
-	/**
-	 * Is this the principal call to action on the page?
-	 */
-	export let primary = false;
+	// eslint-disable-next-line @typescript-eslint/no-unused-vars
+	type $$Props = HTMLAttributes<HTMLButtonElement> & {
+		secondary?: boolean;
+	};
 
-	/**
-	 * What background color to use
-	 */
-	export let backgroundColor: string | undefined = undefined;
-	/**
-	 * How large should the button be?
-	 */
-	export let size: 'small' | 'medium' | 'large' = 'medium';
-	/**
-	 * Button contents
-	 */
-	export let label: string = '';
-
-	$: mode = primary ? 'storybook-button--primary' : 'storybook-button--secondary';
-
-	$: style = backgroundColor ? `background-color: ${backgroundColor}` : '';
+	export let secondary = false;
 </script>
 
-<button
-	type="button"
-	class={['storybook-button', `storybook-button--${size}`, mode].join(' ')}
-	{style}
-	on:click
->
-	teste de build build 2
-	{label}
+<button data-is-secondary={secondary} type="button" on:click {...$$restProps}>
+	<slot name="icon" />
+	<slot />
 </button>
+
+<style lang="scss">
+	button {
+		padding: 0.85rem 2rem;
+		border: 1px solid var(--blue-300, #3e698b);
+		border-radius: 0.5rem;
+		color: var(--white);
+		background: var(--blue-400);
+		transition: all ease 0.2s;
+		cursor: pointer;
+		display: flex;
+		gap: 0.5rem;
+
+		&:hover {
+			filter: brightness(0.9);
+		}
+
+		&[data-is-secondary='true'] {
+			background: transparent;
+		}
+	}
+</style>

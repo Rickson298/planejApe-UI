@@ -27,7 +27,8 @@
 		"!dist/**/*.test.*",
 		"!dist/**/*.spec.*",
 		"!dist/**/*.stories.*",
-		"!dist/**/*.mdx*"
+		"!dist/**/*.mdx*",
+		"!dist/**/*.example.*"
 	],
 	"peerDependencies": {
 		"svelte": "^4.0.0"
