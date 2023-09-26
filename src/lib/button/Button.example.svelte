@@ -8,7 +8,7 @@
 		storybookLabel?: string;
 	};
 
-	export let storybookLabel = '';
+	export let storybookLabel = 'Storybook';
 </script>
 
 <Button {...$$restProps}>{storybookLabel}</Button>
