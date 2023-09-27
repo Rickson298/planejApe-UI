@@ -1,5 +1,5 @@
 <script>
-	import { THEME_COLORS } from '../../shared/tokens';
+	import { THEME_COLORS } from '$lib';
 	import { darken, getContrast } from 'polished';
 
 	const ARRAY_COLORS = Object.entries(THEME_COLORS);

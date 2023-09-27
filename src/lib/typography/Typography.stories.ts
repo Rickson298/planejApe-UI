@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/svelte';
 
 import Typography from './Typography.example.svelte';
-import { FONT_SIZES, FONT_WEIGHT } from '../../shared/tokens/font';
+import { FONT_SIZES, FONT_WEIGHT } from '../tokens/font';
 
 const meta = {
 	title: 'Components/Typography',

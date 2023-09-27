@@ -1,4 +1,4 @@
-import type { FontSizes } from '../theme/types/text.js';
+import type { FontSizes } from '../types/text.js';
 
 export const FONT_SIZES: FontSizes[] = [
 	'0.5rem', // 0.8px
