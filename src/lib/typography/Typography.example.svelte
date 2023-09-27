@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type { FontSizes, TextAlign, Colors, FontWeight } from '../../shared/theme/types';
+	import type { Colors, FontSizes, FontWeight, TextAlign } from '$lib';
 	import Typography from './Typography.svelte';
 
 	// eslint-disable-next-line @typescript-eslint/no-unused-vars
