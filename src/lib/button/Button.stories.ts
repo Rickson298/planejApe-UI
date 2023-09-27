@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from '@storybook/svelte';
 import Button from './Button.example.svelte';
 
 const meta = {
-	title: 'Example/Button',
+	title: 'Components/Button',
 	component: Button,
 	tags: ['autodocs'],
 	argTypes: {}

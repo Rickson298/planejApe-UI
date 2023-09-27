@@ -1,5 +1,5 @@
 <script>
-	import { FONT_SIZES } from '../../shared/tokens/font-sizes';
+	import { FONT_SIZES } from '../../shared/tokens/font';
 </script>
 
 <div class="font-sizes__container">

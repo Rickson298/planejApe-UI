@@ -17,3 +17,5 @@ export const FONT_SIZES: FontSizes[] = [
 	'2.125rem', // 34px
 	'2.25rem' // 36px
 ];
+
+export const FONT_WEIGHT = ['400', '500', '600'];
