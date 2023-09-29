@@ -1,4 +1,5 @@
-import { render } from '@testing-library/svelte';
+import { vi } from 'vitest';
+import { fireEvent, render } from '@testing-library/svelte';
 import Button from './Button.example.svelte';
 
 describe('Button', () => {
@@ -25,5 +26,22 @@ describe('Button', () => {
 		const button = getByRole('button');
 		expect(button).toBeInTheDocument();
 		expect(button).toHaveAttribute('data-is-secondary', 'true');
+	});
+	test('Should dispatch on:click event', async () => {
+		const { getByRole, component } = render(Button, {
+			props: {
+				secondary: true
+			}
+		});
+
+		const button = getByRole('button');
+
+		const onClick = vi.fn();
+
+		component.$on('click', onClick);
+
+		fireEvent.click(button);
+
+		expect(onClick).toHaveBeenCalled();
 	});
 });

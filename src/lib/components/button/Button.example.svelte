@@ -11,4 +11,4 @@
 	export let storybookLabel = 'Storybook';
 </script>
 
-<Button {...$$restProps}>{storybookLabel}</Button>
+<Button {...$$restProps} on:click>{storybookLabel}</Button>
