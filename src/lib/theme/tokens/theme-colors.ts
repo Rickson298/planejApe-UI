@@ -12,5 +12,6 @@ export const THEME_COLORS = {
 	'gray-200': '#e7e7e7',
 	'gray-300': '#bfbfbf',
 	'gray-400': '#9b9b9b',
-	'gray-500': '#4e4e4e'
+	'gray-500': '#4e4e4e',
+	'success-primary': '#759852'
 };
