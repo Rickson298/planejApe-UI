@@ -1,4 +1,5 @@
 export const THEME_COLORS = {
+	white: '#fff',
 	'blue-50': '#9df1ff',
 	'blue-100': '#a0cef3',
 	'blue-200': '#5b93c0',
