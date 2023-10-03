@@ -1,0 +1,25 @@
+{
+	"create-sb-file": {
+		"prefix": "create-sb-file",
+		"body": [
+			"import type { Meta, StoryObj } from '@storybook/svelte';",
+			"",
+			"import ${TM_FILENAME_BASE/([a-z]*)[.]+([a-z]*)/$1/g} from './${TM_FILENAME_BASE/([a-z]*)[.]+([a-z]*)/$1/g}.svelte';",
+			"",
+			"const meta = {",
+			"\ttitle: 'Components/${TM_FILENAME_BASE/([a-z]*)[.]+([a-z]*)/$1/g}',",
+			"\tcomponent: ${TM_FILENAME_BASE/([a-z]*)[.]+([a-z]*)/$1/g},",
+			"\ttags: ['autodocs'],",
+			"\targTypes: {}",
+			"} satisfies Meta<${TM_FILENAME_BASE/([a-z]*)[.]+([a-z]*)/$1/g}>;",
+			"",
+			"export default meta;",
+			"type Story = StoryObj<typeof meta>;",
+			"",
+			"export const Default: Story = {",
+			"\targs: {}",
+			"};"
+		],
+		"description": "Create Svelte storybook Meta"
+	}
+}
