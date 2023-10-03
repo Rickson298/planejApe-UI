@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type { Colors, FontSizes, FontWeight, TextAlign } from '$lib';
+	import type { FontSizes, TextAlign, Colors, FontWeight } from '$lib/utils/types';
 
 	export let fontSize: FontSizes = '1rem';
 	export let textAlign: TextAlign = 'start';

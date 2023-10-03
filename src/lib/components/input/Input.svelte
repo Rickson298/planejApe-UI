@@ -5,8 +5,10 @@
 	// eslint-disable-next-line @typescript-eslint/no-unused-vars
 	type $$Props = HTMLInputAttributes & {
 		helperText?: string;
+		value?: string;
 	};
 
+	export let value = '';
 	export let helperText = '';
 </script>
 
@@ -17,6 +19,7 @@
 			data-alert={!!helperText}
 			aria-disabled={$$props.disabled}
 			placeholder={$$props.placeholder}
+			bind:value
 			{...$$restProps}
 		/>
 		{#if $$props.placeholder}
