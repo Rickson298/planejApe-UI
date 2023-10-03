@@ -1,5 +1,9 @@
-# create-svelte
-
+## PlanejApe-UI
+#### A svelte libray of @PlanejApe
+<div>
+<img src="https://img.shields.io/badge/Svelte-4A4A55?style=for-the-badge&logo=svelte&logoColor=FF3E00"/> 
+<img src="https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=sass&logoColor=white"/>
+</div>
 Everything you need to build a Svelte library, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
 
 Read more about creating a library [in the docs](https://kit.svelte.dev/docs/packaging).
