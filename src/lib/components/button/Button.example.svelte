@@ -6,6 +6,7 @@
 	type $$Props = HTMLAttributes<HTMLButtonElement> & {
 		secondary?: boolean;
 		storybookLabel?: string;
+		background?: string;
 	};
 
 	export let storybookLabel = 'Storybook';

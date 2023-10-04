@@ -44,4 +44,28 @@ describe('Button', () => {
 
 		expect(onClick).toHaveBeenCalled();
 	});
+
+	test('Should use the background prop', async () => {
+		const { getByRole } = render(Button, {
+			props: {
+				background: 'red'
+			}
+		});
+
+		const button = getByRole('button');
+
+		expect(button).toHaveStyle('background: red');
+	});
+	test('Should use the background prop with secondary prop', async () => {
+		const { getByRole } = render(Button, {
+			props: {
+				background: 'red',
+				secondary: true
+			}
+		});
+
+		const button = getByRole('button');
+
+		expect(button).toHaveStyle({ background: 'transparent', 'border-color': 'red' });
+	});
 });
