@@ -5,10 +5,10 @@ import Button from './Button.example.svelte';
 describe('Button', () => {
 	const { getByRole } = render(Button);
 	const button = getByRole('button');
-	test('Should render button', async () => {
+	test('Should render button', () => {
 		expect(button).toBeInTheDocument();
 	});
-	test('Should use rest props', async () => {
+	test('Should use rest props', () => {
 		button.style.background = 'red';
 		button.classList.add('vitest-test');
 
@@ -16,7 +16,7 @@ describe('Button', () => {
 		expect(button).toHaveClass('vitest-test');
 	});
 
-	test('Should render the secondary variant', async () => {
+	test('Should render the secondary variant', () => {
 		const { getByRole } = render(Button, {
 			props: {
 				secondary: true
@@ -27,7 +27,7 @@ describe('Button', () => {
 		expect(button).toBeInTheDocument();
 		expect(button).toHaveAttribute('data-is-secondary', 'true');
 	});
-	test('Should dispatch on:click event', async () => {
+	test('Should dispatch on:click event', () => {
 		const { getByRole, component } = render(Button, {
 			props: {
 				secondary: true
@@ -45,7 +45,7 @@ describe('Button', () => {
 		expect(onClick).toHaveBeenCalled();
 	});
 
-	test('Should use the background prop', async () => {
+	test('Should use the background prop', () => {
 		const { getByRole } = render(Button, {
 			props: {
 				background: 'red'
@@ -56,7 +56,7 @@ describe('Button', () => {
 
 		expect(button).toHaveStyle('background: red');
 	});
-	test('Should use the background prop with secondary prop', async () => {
+	test('Should use the background prop with secondary prop', () => {
 		const { getByRole } = render(Button, {
 			props: {
 				background: 'red',
