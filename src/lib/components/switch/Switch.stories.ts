@@ -28,3 +28,15 @@ export const Default: Story = {
 		label: 'Switch'
 	}
 };
+export const Disabled: Story = {
+	args: {
+		disabled: true,
+		label: 'Desabilitado'
+	}
+};
+export const Checked: Story = {
+	args: {
+		isChecked: true,
+		label: 'Ativo'
+	}
+};
