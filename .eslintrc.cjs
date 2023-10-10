@@ -22,6 +22,9 @@ module.exports = {
 	globals: {
 		$$Generic: 'readonly',
 	},
+	rules: {
+		'no-console': 'warn',
+	},
 	overrides: [
 		{
 			files: ['*.svelte'],
