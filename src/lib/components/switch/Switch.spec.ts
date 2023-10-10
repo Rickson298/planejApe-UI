@@ -1,6 +1,6 @@
 import { fireEvent, render } from '@testing-library/svelte';
-import Switch from './Switch.svelte';
 import { vi } from 'vitest';
+import Switch from './Switch.svelte';
 
 describe('Switch', () => {
 	test('Should render switch', () => {
