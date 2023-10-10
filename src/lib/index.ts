@@ -6,6 +6,7 @@ export { default as Modal } from './components/modal/Modal.svelte';
 export { default as Flex } from './components/flex/Flex.svelte';
 export { default as Table } from './components/table/Table.svelte';
 export { default as Switch } from './components/switch/Switch.svelte';
+export { default as Tag } from './components/tag/Tag.svelte';
 
 export * from './shared/types';
 export * from './theme/tokens';
