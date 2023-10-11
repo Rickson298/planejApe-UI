@@ -9,6 +9,7 @@ export { default as Switch } from './components/switch/Switch.svelte';
 export { default as Tag } from './components/tag/Tag.svelte';
 export { default as ItemsPerPage } from './components/items-per-page/ItemsPerPage.svelte';
 export { default as Breadcrumb } from './components/breadcrumb/Breadcrumb.svelte';
+export { default as Pagination } from './components/pagination/Pagination.svelte';
 
 export * from './shared/types';
 export * from './components/breadcrumb/types';
