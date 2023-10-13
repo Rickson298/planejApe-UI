@@ -10,7 +10,9 @@ export { default as Tag } from './components/tag/Tag.svelte';
 export { default as ItemsPerPage } from './components/items-per-page/ItemsPerPage.svelte';
 export { default as Breadcrumb } from './components/breadcrumb/Breadcrumb.svelte';
 export { default as Pagination } from './components/pagination/Pagination.svelte';
+export { default as Select } from './components/select/Select.svelte';
 
 export * from './shared/types';
 export * from './components/breadcrumb/types';
+export * from './components/select/types';
 export * from './theme/tokens';

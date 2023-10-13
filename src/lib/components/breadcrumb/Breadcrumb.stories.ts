@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/svelte';
 
 import BreadCrumb from './Breadcrumb.svelte';
 
-import { breadCrumbItemsMock } from './items.mocks';
+import { BREADCRUMB_ITEMS_MOCK } from './items.mocks';
 
 const meta = {
 	title: 'Components/BreadCrumb',
@@ -20,6 +20,6 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
 	args: {
-		items: breadCrumbItemsMock
+		items: BREADCRUMB_ITEMS_MOCK
 	}
 };
