@@ -48,6 +48,7 @@
 		flex-direction: column;
 		border: none;
 		gap: 0.5rem;
+		border-radius: 0.5rem;
 	}
 
 	.placeholder-custom {
@@ -68,13 +69,13 @@
 
 	input {
 		padding: 0.75rem 0.875rem;
-		border-radius: 0.5rem;
 		border: 2px solid var(--blue-300);
 		background: transparent;
 		transition: all ease 0.2s;
 		outline: 1px solid transparent;
 		width: 100%;
 		color: var(--white);
+		border-radius: 0.5rem;
 
 		&[data-alert='true'] {
 			background: var(--blue-400);
