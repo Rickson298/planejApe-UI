@@ -43,7 +43,7 @@
 		}
 
 		&:hover {
-			filter: brightness(0.9);
+			opacity: 0.8;
 		}
 	}
 </style>
