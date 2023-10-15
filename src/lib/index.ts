@@ -11,6 +11,7 @@ export { default as ItemsPerPage } from './components/items-per-page/ItemsPerPag
 export { default as Breadcrumb } from './components/breadcrumb/Breadcrumb.svelte';
 export { default as Pagination } from './components/pagination/Pagination.svelte';
 export { default as Select } from './components/select/Select.svelte';
+export { default as Skeleton } from './components/skeleton/Skeleton.svelte';
 
 export * from './shared/types';
 export * from './components/breadcrumb/types';
