@@ -7,7 +7,6 @@ import { BREADCRUMB_ITEMS_MOCK } from './items.mocks';
 const meta = {
 	title: 'Components/BreadCrumb',
 	component: BreadCrumb,
-	tags: ['autodocs'],
 	argTypes: {
 		items: {
 			description: 'An array that contains object with  `label`, `href` and optional `icon` prop,'

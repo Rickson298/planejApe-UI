@@ -1,0 +1,43 @@
+import { Canvas, Meta, Controls } from '@storybook/blocks';
+
+import * as BreadcrumbStories from './Breadcrumb.stories';
+
+<Meta of={BreadcrumbStories} />
+
+# Breadcrumb
+
+A breadcrumb component is a common web application UI element used for navigation and displaying the user's current location in a hierarchy. It consists of clickable links representing the user's path. Breadcrumbs enhance user experience, enabling easy navigation and context understanding. Typically, they are displayed at the top of the page to maintain user orientation.
+
+Usage:
+
+- Breadcrumbs are typically displayed horizontally at the top of a page.
+- Each element in the breadcrumb trail represents a step in the user's journey.
+- Clicking on a breadcrumb link takes the user back to that specific point in the hierarchy.
+
+<Canvas of={BreadcrumbStories.Default} />
+
+### Import
+
+```ts
+import { Breadcrumb } from 'planejape-ui-svelte';
+```
+
+### Usage
+
+Import `Breadcrumb` using step above and pass the `items` prop to component. Suppose you have the following const:
+
+```ts
+const BREADCRUMB_ITEMS_MOCK: BreadcrumbItem[] = [
+	{ label: 'Início', icon: House, href: '/' },
+	{ label: 'Produtos do apartamento', href: '/' },
+	{ label: 'Ultima etapa', href: '/' }
+];
+```
+
+Call the **Breadcrumb** component and pass the **items** prop:
+
+```jsx
+<Breadcrumb items={BREADCRUMB_ITEMS_MOCK} />
+```
+
+<Controls />
