@@ -5,7 +5,6 @@ import Button from './Button.example.svelte';
 const meta = {
 	title: 'Components/Button',
 	component: Button,
-	tags: ['autodocs'],
 	argTypes: {}
 } satisfies Meta<Button>;
 

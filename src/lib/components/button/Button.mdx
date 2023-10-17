@@ -1,0 +1,50 @@
+import { Canvas, Meta, Controls, Story } from '@storybook/blocks';
+
+import * as ButtonStories from './Button.stories';
+
+<Meta of={ButtonStories} />
+
+# Button
+
+A button is a fundamental UI element used to trigger actions or events in web and software applications. Buttons can be customized for various purposes and are labeled with action descriptions like "Submit" or "Save." They are essential for user interaction and interface functionality.
+
+<br />
+<hr />
+<br />
+
+### Import
+
+```ts
+import { Button } from 'planejape-ui-svelte';
+```
+
+### Usage
+
+<Canvas of={ButtonStories.Primary} />
+
+Import `Button` using step above and pass, you can pass a `slot` prop to render childs, like this:
+
+```jsx
+<Button on:click={() => console.log('log')}>I'm a button</Button>
+```
+
+## Variants
+
+### Primary
+
+Button has two variant: primary and secondary
+The `primary` variant has a filled background:
+
+<Story of={ButtonStories.Primary} />
+
+### Secondary
+
+The secondary variant is outlined
+
+<Story of={ButtonStories.Secondary} />
+
+<br />
+
+## Props
+
+<Controls />

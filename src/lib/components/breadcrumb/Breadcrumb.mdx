@@ -14,7 +14,9 @@ Usage:
 - Each element in the breadcrumb trail represents a step in the user's journey.
 - Clicking on a breadcrumb link takes the user back to that specific point in the hierarchy.
 
-<Canvas of={BreadcrumbStories.Default} />
+<br />
+<hr />
+<br />
 
 ### Import
 
@@ -23,6 +25,8 @@ import { Breadcrumb } from 'planejape-ui-svelte';
 ```
 
 ### Usage
+
+<Canvas of={BreadcrumbStories.Default} />
 
 Import `Breadcrumb` using step above and pass the `items` prop to component. Suppose you have the following const:
 
@@ -39,5 +43,7 @@ Call the **Breadcrumb** component and pass the **items** prop:
 ```jsx
 <Breadcrumb items={BREADCRUMB_ITEMS_MOCK} />
 ```
+
+## Props
 
 <Controls />
