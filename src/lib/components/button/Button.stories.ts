@@ -7,7 +7,8 @@ const meta = {
 	component: Button,
 	argTypes: {
 		storybookLabel: {
-			description: 'Just a prop to view the slot prop'
+			description: 'The child of button, slot prop',
+			name: 'slot'
 		},
 		'on:click': {
 			description: 'Click event'
