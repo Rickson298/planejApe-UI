@@ -1,0 +1,77 @@
+import { Canvas, Meta, Controls, Story } from '@storybook/blocks';
+
+import * as InputStories from './Input.stories';
+
+<Meta of={InputStories} />
+
+# Input
+
+An input component is a fundamental element in web and software interfaces used for capturing user-provided information. It typically presents a space for users to type text or select options. Inputs can be used for various purposes, such as forms, search bars, or data entry. They are essential for gathering user input and enabling interaction within applications.
+
+<br />
+<hr />
+<br />
+
+### Import
+
+```ts
+import { Input } from 'planejape-ui-svelte';
+```
+
+### Usage
+
+<Canvas of={InputStories.Default} />
+
+Import `Input` using step above and pass, and pass the property that you want:
+
+```jsx
+<Input />
+```
+
+### Tricks
+
+If you come from react, you may be familiar with something like this:
+
+```js
+function App() {
+	const [name, setName] = useState('');
+
+	return (
+		<input
+			onChange={(event) => {
+				setName(event.currentTarget.value);
+			}}
+		/>
+	);
+}
+```
+
+In svelte, we don't need of `onChange` or `onInput` event to get or set the value or input, thanks to bind, we can take and assign a value to the input as follows:
+
+```jsx
+<script>let name = ''</script>
+
+<input bind:value={name}/>
+```
+
+well, it's much easier, isn't it? If you still dont know about svelte bind, see more in [Svelte bindings](https://svelte.dev/docs/element-directives#bind-property)
+
+<br />
+
+### Disable input
+
+Without pointers events and custom styles
+
+<Canvas of={InputStories.Disabled} />
+
+### With helper text
+
+Some times, we need to show a helper text together of `Input`, maybe to show a required field alert,
+of something else. In this case, the `Input` component has a helper text propert{' '}
+
+<Canvas of={InputStories.HelperText} />
+
+## Props
+
+<Canvas of={InputStories.Default} />
+<Controls />

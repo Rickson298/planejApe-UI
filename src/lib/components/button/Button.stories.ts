@@ -12,6 +12,10 @@ const meta = {
 		},
 		'on:click': {
 			description: 'Click event'
+		},
+		secondary: {
+			type: 'boolean',
+			description: 'The variant of button'
 		}
 	}
 } satisfies Meta<Button>;
