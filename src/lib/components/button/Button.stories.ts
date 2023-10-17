@@ -5,7 +5,14 @@ import Button from './Button.example.svelte';
 const meta = {
 	title: 'Components/Button',
 	component: Button,
-	argTypes: {}
+	argTypes: {
+		storybookLabel: {
+			description: 'Just a prop to view the slot prop'
+		},
+		'on:click': {
+			description: 'Click event'
+		}
+	}
 } satisfies Meta<Button>;
 
 export default meta;
