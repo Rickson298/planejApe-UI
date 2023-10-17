@@ -5,18 +5,20 @@ import Flex from './Flex.example.svelte';
 const meta = {
 	title: 'Wrappers/Flex',
 	component: Flex,
-	tags: ['autodocs'],
 	argTypes: {
 		gap: {
+			description: 'The `gap` property',
 			defaultValue: '1rem',
 			type: 'string'
 		},
 		direction: {
 			defaultValue: 'row',
 			options: ['row', 'column'],
-			control: 'select'
+			control: 'select',
+			description: 'The `flex-direction` property'
 		},
 		justifyContent: {
+			description: 'The `justify-content` property',
 			defaultValue: 'center',
 			options: [
 				'center',
@@ -31,9 +33,19 @@ const meta = {
 			control: 'select'
 		},
 		alignItems: {
+			description: 'The `align-items` property',
 			defaultValue: 'center',
 			options: ['center', 'start', 'end', 'baseline', 'stretch'],
 			control: 'select'
+		},
+		width: {
+			description: 'Width of flex'
+		},
+		height: {
+			description: 'height of flex'
+		},
+		padding: {
+			description: 'Padding of flex'
 		}
 	}
 } satisfies Meta<Flex>;
