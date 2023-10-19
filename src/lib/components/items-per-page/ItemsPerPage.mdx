@@ -1,0 +1,28 @@
+import { Canvas, Meta, Controls, Story } from '@storybook/blocks';
+
+import * as ItemsPerPageStories from './ItemsPerPage.stories';
+
+<Meta of={ItemsPerPageStories} />
+
+# ItemsPerPage
+
+An "Items per Page" component is a user interface element often used in pagination controls within web applications. It allows users to specify the number of items or entries they want to display on a single page. This component simplifies navigation and customization for users by providing control over the amount of content shown per page. It's particularly useful for lists, tables, or search results, enhancing the user's experience by tailoring content visibility to their preferences.
+
+<br />
+<hr />
+<br />
+
+### Import
+
+```ts
+import { ItemsPerPage } from 'planejape-ui-svelte';
+```
+
+### Usage
+
+<Canvas of={ItemsPerPageStories.Default} />
+
+## Props
+
+<Canvas of={ItemsPerPageStories.Default} />
+<Controls />
