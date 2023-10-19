@@ -7,14 +7,20 @@ import { SELECT_MOCK_OPTIONS } from './options.mock';
 const meta = {
 	title: 'Components/Select',
 	component: Select,
-	tags: ['autodocs'],
 	argTypes: {
 		options: {
-			defaultValue: SELECT_MOCK_OPTIONS
+			defaultValue: SELECT_MOCK_OPTIONS,
+			description:
+				'An array of select options, each object should have a `label` and `value` property'
 		},
 		placeholder: {
 			defaultValue: 'Placeholder',
-			type: 'string'
+			type: 'string',
+			description: 'The placeholder of select'
+		},
+		value: {
+			type: 'string',
+			description: 'The value of select'
 		}
 	}
 } satisfies Meta<Select>;

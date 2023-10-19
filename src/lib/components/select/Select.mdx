@@ -1,0 +1,49 @@
+import { Canvas, Meta, Controls, Story } from '@storybook/blocks';
+
+import * as SelectStories from './Select.stories';
+
+<Meta of={SelectStories} />
+
+# Select
+
+A Select component is a basic user interface element commonly used in web and software applications. It provides users with a dropdown list of options from which they can choose one. Select components are often used in forms and other interactive elements, allowing users to make a single selection from multiple choices. They enhance user interaction and data input by presenting a compact and user-friendly way to choose from predefined options.
+
+<br />
+<hr />
+<br />
+
+### Import
+
+```ts
+import { Select } from 'planejape-ui-svelte';
+```
+
+### Usage
+
+<Canvas of={SelectStories.Default} />
+
+Import `Select` component and use like below, ex:
+
+1. Create a const to have the options of your select and a let to have the value of select, like below:
+
+```js
+let selectValue = '';
+
+const SELECT_MOCK_OPTIONS: SelectOption[] = [
+	{ label: 'Opção 1', value: 'option_1' },
+	{ label: 'Opção 2', value: 'option_2' },
+	{ label: 'Opção 3', value: 'option_3' },
+	{ label: 'Opção 4', value: 'option_4' }
+];
+```
+
+2. Pass the options and bind the `selectValue` to select
+
+```jsx
+<Select options={SELECT_MOCK_OPTIONS} bind:value={selectValue} />
+```
+
+## Props
+
+<Canvas of={SelectStories.Default} />
+<Controls />
