@@ -1,0 +1,62 @@
+import { Canvas, Meta, Controls, Story } from '@storybook/blocks';
+
+import * as ModalStories from './Modal.stories';
+
+<Meta of={ModalStories} />
+
+# Modal
+
+A Modal component is a key user interface element in web and software development. It displays content or information on top of the main interface, typically in a pop-up or overlay format. Modals are often used for alerts, notifications, forms, or additional details without navigating away from the current page. They enhance user experience by focusing attention on specific content while temporarily dimming or overlaying the background. Modals provide a non-disruptive way to interact with additional information or actions within an application.
+
+<br />
+<hr />
+<br />
+
+### Import
+
+```ts
+import { Modal } from 'planejape-ui-svelte';
+```
+
+### Usage
+
+<Canvas of={ModalStories.Default} />
+
+Import `Modal` component and use like below, ex:
+
+1. Import the Modal component and create a `let isOpen` to handle the open on close state of modal
+
+```html
+<script>
+	import { Modal } from 'planejape-ui-svelte';
+
+	export let isOpen = false;
+
+	function handleModal() {
+		isOpen = !isOpen;
+	}
+</script>
+```
+
+2. Place the `Modal` component with a `bind` property to handle the isOpen value
+
+```jsx
+<Modal bind:isOpen width="550px">
+	I'm a modal
+</Modal>
+```
+
+3. Place a button (or trigger element) that will trigger the `handleModal` function:
+
+```jsx
+<button on:click={handleModal}>Abrir modal</button>
+
+<Modal bind:isOpen >
+	I'm a modal
+</Modal>
+```
+
+## Props
+
+<Canvas of={ModalStories.Default} />
+<Controls />

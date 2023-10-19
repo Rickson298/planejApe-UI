@@ -5,7 +5,7 @@ import Modal from './Modal.example.svelte';
 const meta = {
 	title: 'Components/Modal',
 	component: Modal,
-	tags: ['autodocs'],
+
 	argTypes: {
 		isOpen: {
 			type: 'boolean'

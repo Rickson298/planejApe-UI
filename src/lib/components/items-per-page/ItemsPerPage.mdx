@@ -22,6 +22,24 @@ import { ItemsPerPage } from 'planejape-ui-svelte';
 
 <Canvas of={ItemsPerPageStories.Default} />
 
+Import `ItemsPerPage` component and bind the value propert, ex:
+
+1. Define your let that will receive the current value of items per page
+
+```html
+<script>
+	let ItemsPerPage = undefined;
+</script>
+```
+
+2. Use the `bind` property to get or set the value of `ItemsPerPage`
+
+```jsx
+<ItemsPerPage bind:value={ItemsPerPage} />
+```
+
+**OBS**: You don't need to pass all props of `ItemsPerPage`. The value of `itemsPerPage` and `optionsQuantity` are defined by default, however, you can define it if you prefer
+
 ## Props
 
 <Canvas of={ItemsPerPageStories.Default} />
