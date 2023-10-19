@@ -5,15 +5,16 @@ import Pagination from './Pagination.svelte';
 const meta = {
 	title: 'Components/Pagination',
 	component: Pagination,
-	tags: ['autodocs'],
 	argTypes: {
 		currentPage: {
 			defaultValue: 1,
-			type: 'number'
+			type: 'number',
+			description: 'The current value of pagination'
 		},
 		maxPage: {
 			defaultValue: 5,
-			type: 'number'
+			type: 'number',
+			description: 'The number of total pages'
 		}
 	}
 } satisfies Meta<Pagination>;

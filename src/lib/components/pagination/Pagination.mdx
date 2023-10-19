@@ -1,0 +1,46 @@
+import { Canvas, Meta, Controls, Story } from '@storybook/blocks';
+
+import * as PaginationStories from './Pagination.stories';
+
+<Meta of={PaginationStories} />
+
+# Pagination
+
+A Pagination component is a user interface element used in web applications to divide and display large sets of data or content across multiple pages. It typically includes links or buttons for navigating to different pages of content, such as search results or lists. Pagination enhances user experience by breaking down content into manageable sections and allowing users to easily navigate through them. It's a fundamental tool for efficient content organization and presentation.
+
+<br />
+<hr />
+<br />
+
+### Import
+
+```ts
+import { Pagination } from 'planejape-ui-svelte';
+```
+
+### Usage
+
+<Canvas of={PaginationStories.Default} />
+
+Import `Pagination` component and use like below, ex:
+
+1. Import the Pagintion component and create a `let currentPage` to handle the value of pagination
+
+```html
+<script>
+	import { Pagination } from 'planejape-ui-svelte';
+
+	export let currentPage = 1;
+</script>
+```
+
+2. Place the `Pagination` component with a `bind` property to handle the current page
+
+```jsx
+<Pagination bind:currentPage maxPage={5} />
+```
+
+## Props
+
+<Canvas of={PaginationStories.Default} />
+<Controls />
