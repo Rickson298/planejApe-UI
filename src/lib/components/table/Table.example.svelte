@@ -1,4 +1,5 @@
 <script>
+	import List from 'phosphor-svelte/lib/List';
 	import Table from './Table.svelte';
 	import { users } from './table-data.mocks';
 </script>
@@ -6,9 +7,9 @@
 <Table data={users} let:item>
 	<thead slot="header">
 		<th>ID</th>
-		<th>Nome</th>
-		<th>Idade</th>
-		<th>Cidade</th>
+		<th>Name</th>
+		<th>Age</th>
+		<th>City</th>
 		<th>Email</th>
 	</thead>
 	<tr>
@@ -17,6 +18,6 @@
 		<td>{item.age} </td>
 		<td>{item.city}</td>
 		<td>{item.email}</td>
-		<td>Ações</td>
+		<td><List /></td>
 	</tr>
 </Table>

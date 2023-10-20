@@ -1,0 +1,121 @@
+import { Canvas, Meta, Controls, Story } from '@storybook/blocks';
+
+import * as TableStories from './Table.stories';
+
+<Meta of={TableStories} />
+
+# Table
+
+A Table component is a fundamental user interface element in web and software applications used for organizing and displaying data in a structured grid format. It typically consists of rows and columns, with each cell containing data or content. Tables are essential for presenting tabular data, such as lists, reports, or databases, in an organized and easily readable format. They enhance user experience by providing a structured way to view, sort, and interact with data. Tables are widely used in various data-driven applications to present information in a systematic manner.
+
+<br />
+<hr />
+<br />
+
+### Import
+
+```ts
+import { Table } from 'planejape-ui-svelte';
+```
+
+### Usage
+
+You can use the `Table` component following the next steps:
+
+1. Create a const of your table data, ex
+
+```html
+<script>
+	const users = [
+		{
+			id: 1,
+			name: 'John',
+			age: 30,
+			email: 'john@example.com',
+			city: 'New York'
+		},
+		{
+			id: 2,
+			name: 'Mary',
+			age: 25,
+			email: 'mary@example.com',
+			city: 'Los Angeles'
+		},
+		{
+			id: 3,
+			name: 'Carlos',
+			age: 35,
+			email: 'carlos@example.com',
+			city: 'Chicago'
+		},
+		{
+			id: 4,
+			name: 'Anna',
+			age: 28,
+			email: 'anna@example.com',
+			city: 'Houston'
+		},
+		{
+			id: 5,
+			name: 'Paul',
+			age: 27,
+			email: 'paul@example.com',
+			city: 'Miami'
+		}
+	];
+</script>
+```
+
+2. Place the `Table` component and pass the `data` property, then, pass the property `let:item`
+   OBS: `let:item` is a slot prop, learn more about slot props here: [Svelte slot props](https://learn.svelte.dev/tutorial/slot-props)
+
+```jsx
+<Table data={users} let:item>
+	...
+</Table>
+```
+
+3. Declare the headers of your table, making sure to declare the property `slot="header"` in your `thead`
+
+```tsx
+<Table data={users} let:item>
+	<thead slot="header">
+		<th>ID</th>
+		<th>Nome</th>
+		<th>Idade</th>
+		<th>Cidade</th>
+		<th>Email</th>
+	</thead>
+	...
+</Table>
+```
+
+4. Finally, declare what the rows of your table will look like
+
+```tsx
+<Table data={users} let:item>
+	<thead slot="header">
+		<th>ID</th>
+		<th>Nome</th>
+		<th>Idade</th>
+		<th>Cidade</th>
+		<th>Email</th>
+	</thead>
+	// Each row in your table will contain this format of tr below
+	<tr>
+		<td>{item.id}</td>
+		<td>{item.name}</td>
+		<td>{item.age} </td>
+		<td>{item.city}</td>
+		<td>{item.email}</td>
+		<td>Actions</td>
+	</tr>
+</Table>
+```
+
+<Canvas of={TableStories.Default} />
+
+## Props
+
+<Canvas of={TableStories.Default} />
+<Controls />

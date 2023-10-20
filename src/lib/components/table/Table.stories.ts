@@ -5,7 +5,6 @@ import Table from './Table.example.svelte';
 const meta = {
 	title: 'Components/Table',
 	component: Table,
-	tags: ['autodocs'],
 	argTypes: {}
 } satisfies Meta<Table>;
 
