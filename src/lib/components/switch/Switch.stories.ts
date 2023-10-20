@@ -5,7 +5,6 @@ import Switch from './Switch.svelte';
 const meta = {
 	title: 'Components/Switch',
 	component: Switch,
-	tags: ['autodocs'],
 	argTypes: {
 		isChecked: {
 			type: 'boolean'
@@ -31,12 +30,12 @@ export const Default: Story = {
 export const Disabled: Story = {
 	args: {
 		disabled: true,
-		label: 'Desabilitado'
+		label: 'Disabled'
 	}
 };
 export const Checked: Story = {
 	args: {
 		isChecked: true,
-		label: 'Ativo'
+		label: 'Active'
 	}
 };

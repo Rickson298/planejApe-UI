@@ -1,0 +1,62 @@
+import { Canvas, Meta, Controls, Story } from '@storybook/blocks';
+
+import * as SwitchStories from './Switch.stories';
+
+<Meta of={SwitchStories} />
+
+# Switch
+
+A Switch component is a user interface element used in web and software applications to toggle between two states, typically "on" and "off" or "enabled" and "disabled." It is often represented as a sliding or toggling button. Switch components are used to allow users to change a binary setting or make a selection between two options. They enhance user interaction and provide a clear and intuitive way to enable or disable features, preferences, or functions. Switches are commonly used in settings, checkboxes, and control panels.
+
+<br />
+<hr />
+<br />
+
+### Import
+
+```ts
+import { Switch } from 'planejape-ui-svelte';
+```
+
+### Usage
+
+You can use the `Switch` component following the next steps:
+
+1. Create a const to have a current switch value
+
+```html
+<script>
+	const isChecked = false;
+</script>
+```
+
+2. Place the `Switch` component and bind `isChecked` property
+
+```tsx
+<Switch bind:isChecked />
+```
+
+### Disabled
+
+You can render a disable `Switch` just passing a `disabled` property
+
+```jsx
+<Switch disabled label="Disabled" />
+```
+
+<Canvas of={SwitchStories.Disabled} />
+
+### Checked
+
+You can render a checked switch by default, passing the `isChecked` property
+
+```jsx
+<Switch isChecked label="Active" />
+```
+
+<Canvas of={SwitchStories.Checked} />
+
+## Props
+
+<Canvas of={SwitchStories.Default} />
+<Controls />
