@@ -6,9 +6,13 @@ import { FONT_SIZES, FONT_WEIGHT } from '../../theme/tokens/font';
 const meta = {
 	title: 'Components/Typography',
 	component: Typography,
-	tags: ['autodocs'],
 	argTypes: {
-		storybookLabel: { type: 'string', defaultValue: 'Typography' },
+		storybookLabel: {
+			type: 'string',
+			defaultValue: 'Typography',
+			name: 'slot',
+			description: 'The children of Typography'
+		},
 		color: {
 			options: [
 				'blue-50',
@@ -27,15 +31,18 @@ const meta = {
 				'gray-500',
 				'white'
 			],
-			control: 'select'
+			control: 'select',
+			description: 'The color of texts'
 		},
 		fontSize: {
 			options: FONT_SIZES,
-			control: 'select'
+			control: 'select',
+			description: 'The font size'
 		},
 		fontWeight: {
 			options: FONT_WEIGHT,
-			control: 'select'
+			control: 'select',
+			description: 'The font weight'
 		}
 	}
 } satisfies Meta<Typography>;
@@ -43,7 +50,7 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Primary: Story = {
+export const Default: Story = {
 	args: {
 		storybookLabel: 'Typography'
 	}
