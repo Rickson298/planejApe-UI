@@ -5,15 +5,16 @@ import Tag from './Tag.svelte';
 const meta = {
 	title: 'Components/Tag',
 	component: Tag,
-	tags: ['autodocs'],
 	argTypes: {
 		description: {
 			defaultValue: 'description',
-			type: 'string'
+			type: 'string',
+			description: 'The description of tag'
 		},
 		title: {
 			defaultValue: 'Title',
-			type: 'string'
+			type: 'string',
+			description: 'The title of tag'
 		}
 	}
 } satisfies Meta<Tag>;

@@ -19,7 +19,7 @@
 	.tag__container {
 		background: var(--blue-300);
 		width: fit-content;
-		padding: 6px 8px;
+		padding: 3px 8px;
 		display: flex;
 		justify-content: center;
 		align-items: center;

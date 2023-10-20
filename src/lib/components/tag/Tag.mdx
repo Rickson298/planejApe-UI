@@ -1,0 +1,36 @@
+import { Canvas, Meta, Controls, Story } from '@storybook/blocks';
+
+import * as TagStories from './Tag.stories';
+
+<Meta of={TagStories} />
+
+# Tag
+
+A Tag component is a user interface element used in web and software applications to label or categorize content or items. Tags are typically small, visually distinct elements that provide metadata or descriptors. They are commonly used to enhance content organization and navigation by allowing users to quickly identify and filter information. Tag components contribute to a more intuitive user interface and help users locate specific content or items within an application.
+
+<br />
+<hr />
+<br />
+
+### Import
+
+```ts
+import { Tag } from 'planejape-ui-svelte';
+```
+
+### Usage
+
+Import `Tag` using step above and pass, you can pass the title, description and on:click props, like this:
+
+<Canvas of={TagStories.Default} />
+
+```html
+<Tag description="Subtitle" title="Tag" on:click{console.log} />
+```
+
+<br />
+
+## Props
+
+<Canvas of={TagStories.Default} />
+<Controls />
