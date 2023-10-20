@@ -5,7 +5,11 @@ import Table from './Table.example.svelte';
 const meta = {
 	title: 'Components/Table',
 	component: Table,
-	argTypes: {}
+	argTypes: {
+		data: {
+			description: 'An your table data'
+		}
+	}
 } satisfies Meta<Table>;
 
 export default meta;
