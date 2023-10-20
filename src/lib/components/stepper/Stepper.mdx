@@ -1,0 +1,54 @@
+import { Canvas, Meta, Controls, Story } from '@storybook/blocks';
+
+import * as StepperStories from './Stepper.stories';
+
+<Meta of={StepperStories} />
+
+# Stepper
+
+A Stepper component is a user interface element used in web and software applications to guide users through a sequence of steps or actions. It typically includes previous and next buttons or other navigation controls to move the user forward or backward through the process. Steppers enhance the user experience by breaking complex tasks into manageable steps and providing clear progression. They are commonly used in forms, wizards, or multi-step processes, ensuring users can easily navigate and complete tasks in an organized manner.
+
+<br />
+<hr />
+<br />
+
+### Import
+
+```ts
+import { Stepper } from 'planejape-ui-svelte';
+```
+
+### Usage
+
+You can use the `Stepper` component following the next steps:
+
+1. Create two consts, one to have the steps of your Stepper and other to have the current step value:
+
+```html
+<script>
+	//Initial step is 0
+	const currentStep = 0;
+
+	const MOCK_STEPS = [
+		// Label can be a component, string or number
+		{ label: Bag, description: 'Inf. do produto', isChecked: true },
+		{ label: NavigationArrow, description: 'Loja', isChecked: true },
+		{ label: CheckSquareOffset, description: 'Revisão', isChecked: false }
+	];
+</script>
+```
+
+2. Place the `Stepper` component with props declared above
+
+```tsx
+<Stepper {currentStep} steps={MOCK_STEPS}/>
+```
+
+OBS: In this example, we used the sintax `{currentStep}`, a shortcut of Svelte, but you still can use `currentStep={varWithDiferenteName}`, anyway
+
+<Canvas of={StepperStories.Default} />
+
+## Props
+
+<Canvas of={StepperStories.Default} />
+<Controls />

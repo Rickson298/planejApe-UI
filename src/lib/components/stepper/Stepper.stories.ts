@@ -6,10 +6,14 @@ import { MOCK_STEPS } from './steps.mocks';
 const meta = {
 	title: 'Components/Stepper',
 	component: Stepper,
-	tags: ['autodocs'],
 	argTypes: {
 		currentStep: {
-			type: 'string'
+			type: 'string',
+			description: 'The current step of Stepper, must be a number'
+		},
+		steps: {
+			description:
+				'An array containing objects with `label`, `description` and `isChecked` properties'
 		}
 	}
 } satisfies Meta<Stepper>;
