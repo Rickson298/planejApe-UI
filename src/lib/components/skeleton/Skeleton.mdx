@@ -1,0 +1,48 @@
+import { Canvas, Meta, Controls, Story } from '@storybook/blocks';
+
+import * as SkeletonStories from './Skeleton.stories';
+
+<Meta of={SkeletonStories} />
+
+# Skeleton
+
+A Skeleton component is a placeholder or loading animation used in web and software applications to indicate that content is being loaded. It typically appears as a simplified, wireframe-like representation of the actual content, often in the form of boxes or lines. Skeleton components improve user experience by providing a visual cue that something is loading, reducing perceived wait times, and creating a smoother user interface. They are particularly useful for optimizing the user experience during content retrieval.
+
+<br />
+<hr />
+<br />
+
+### Import
+
+```ts
+import { Skeleton } from 'planejape-ui-svelte';
+```
+
+### Usage
+
+You can use the `Skeleton` component with two ways
+
+#### 1. Using with a children
+
+You can place a component inside of `Skeleton` and he will inherit width, height and border radius from children, ex:
+
+```jsx
+<Skeleton>
+  <Ball/>
+<Skeleton/>
+```
+
+<Canvas of={SkeletonStories.WithChild} />
+
+#### 2. Using with custom width and height properties, ex:
+
+```jsx
+<Skeleton width="400px" height="70px" isLoading />
+```
+
+<Canvas of={SkeletonStories.Default} />
+
+## Props
+
+<Canvas of={SkeletonStories.Default} />
+<Controls />

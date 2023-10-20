@@ -1,23 +1,28 @@
 import type { Meta, StoryObj } from '@storybook/svelte';
 
 import Skeleton from './Skeleton.svelte';
+import SkeletonWithChild from './Skeleton.example.svelte';
 
 const meta = {
 	title: 'Components/Skeleton',
 	component: Skeleton,
-	tags: ['autodocs'],
+
 	argTypes: {
 		background: {
-			type: 'string'
+			type: 'string',
+			description: 'Background of skeleton'
 		},
 		height: {
-			type: 'string'
-		},
-		isLoading: {
-			type: 'boolean'
+			type: 'string',
+			description: 'Height of skeleton'
 		},
 		width: {
-			type: 'string'
+			type: 'string',
+			description: 'Width of skeleton'
+		},
+		isLoading: {
+			type: 'boolean',
+			description: 'A boolean value that will show skeleton or not'
 		}
 	}
 } satisfies Meta<Skeleton>;
@@ -30,5 +35,11 @@ export const Default: Story = {
 		width: '400px',
 		height: '70px',
 		isLoading: true
+	}
+};
+
+export const WithChild: Story = {
+	render: () => {
+		return { Component: SkeletonWithChild as unknown as typeof Skeleton };
 	}
 };
