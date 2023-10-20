@@ -7,13 +7,16 @@ const meta = {
 	component: Switch,
 	argTypes: {
 		isChecked: {
-			type: 'boolean'
+			type: 'boolean',
+			description: 'A boolean that indicate if Switch is checked or not'
 		},
 		disabled: {
-			type: 'boolean'
+			type: 'boolean',
+			description: 'A boolean that indicate if Switch is disabled'
 		},
 		label: {
-			type: 'string'
+			type: 'string',
+			description: 'The label of switch'
 		}
 	}
 } satisfies Meta<Switch>;
