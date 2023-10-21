@@ -26,8 +26,6 @@ The 'planejape-ui-svelte' lib uses technologies that promote the scalability and
 - Vitest
 - Testing livrary (Svelte)
 
-<br />
-
 ### How to execute this project
 
 1. Clone this repo the follow example (or as you prefer):
