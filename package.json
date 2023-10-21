@@ -22,6 +22,14 @@
 			"svelte": "./dist/index.js"
 		}
 	},
+	"keywords": [
+		"Svelte",
+		"Storybook",
+		"Chromatic",
+		"GitHub Actions with chromatic",
+		"Vitest",
+		"Testing library svelte"
+	],
 	"files": [
 		"dist",
 		"!dist/**/*.test.*",
