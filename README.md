@@ -1,62 +1,71 @@
-## PlanejApe-UI
-#### A svelte libray of @PlanejApe
-<div>
-<img src="https://img.shields.io/badge/Svelte-4A4A55?style=for-the-badge&logo=svelte&logoColor=FF3E00"/> 
-<img src="https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=sass&logoColor=white"/>
-</div>
-Everything you need to build a Svelte library, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+### Overview
 
-Read more about creating a library [in the docs](https://kit.svelte.dev/docs/packaging).
+The **planejape-ui-svelte** is a library of design system components from the **planejApe** project.
 
-## Creating a project
+In this file, you will find things about: How to run the project, publishing the package in
+npm, chromatic's CI/CD settings and a few other things, so let's get started
 
-If you're seeing this, you've probably already done this step. Congrats!
+The 'planejape-ui-svelte' lib uses technologies that promote the scalability and maintainability of the project:
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
+#### 🛠️ Tecnologies and tools
 
-# create a new project in my-app
-npm create svelte@latest my-app
-```
+- Svelte
+- Storybook
+- Chromatic
 
-## Developing
+#### ⚙️ CI/CD
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+- GitHub actions
 
-```bash
-npm run dev
+#### 📦 Packing
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
+- NPM (to publish package)
 
-Everything inside `src/lib` is part of your library, everything inside `src/routes` can be used as a showcase or preview app.
+#### 📝 Tests
 
-## Building
+- Vitest
+- Testing livrary (Svelte)
 
-To build your library:
+<br />
+
+### How to execute this project
+
+1. Clone this repo the follow example (or as you prefer):
 
 ```bash
-npm run package
+git clone https://github.com/Rickson298/planejApe-UI.git
 ```
 
-To create a production version of your showcase app:
+2. Install the dependencies (only use NPM)
 
 ```bash
-npm run build
+npm install
 ```
 
-You can preview the production build with `npm run preview`.
+3. Start storybook
 
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+```bash
+npm run storybook
+```
 
-## Publishing
+### Publish to NPM
 
-Go into the `package.json` and give your package the desired name through the `"name"` option. Also consider adding a `"license"` field and point it to a `LICENSE` file which you can create from a template (one popular option is the [MIT license](https://opensource.org/license/mit/)).
+**Only [Rickson Oliveira](https://github.com/Rickson298) (me) can publish on NPM, however, it's good to document it here.**
 
-To publish your library to [npm](https://www.npmjs.com):
+To publish a new version of `planejape-ui-svelte` on NPM, follow the instructions below:
+
+1. Update the package version (read about [semantic versioning](https://docs.npmjs.com/about-semantic-versioning) here)
+
+```bash
+npm version patch
+```
+
+2. Publish on NPM
 
 ```bash
 npm publish
 ```
+
+### Chromatic and CI/CD
+
+This app has an action configured for the chromatic CI/CD, it is in the file `/.github/workflows/chromatic.yml`
