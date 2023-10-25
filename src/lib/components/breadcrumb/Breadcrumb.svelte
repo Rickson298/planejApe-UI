@@ -13,7 +13,7 @@
 <div class="breadcrumb__container">
 	{#each items as item, index}
 		{@const isLastItem = index < items.length - 1}
-		<a class="breadcrumb__item" href="/">
+		<a class="breadcrumb__item" href={item.href}>
 			<svelte:component this={item.icon} size={18} />
 			<span class="label">
 				{item.label}

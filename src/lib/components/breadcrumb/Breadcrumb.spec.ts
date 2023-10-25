@@ -13,7 +13,7 @@ describe('Breadcrumb', () => {
 		const { getByRole } = render(Breadcrumb, { items: BREADCRUMB_ITEMS_MOCK });
 		const link = getByRole('link', { name: 'Ultima etapa' });
 
-		expect(link).toHaveAttribute('href', '/');
+		expect(link).toHaveAttribute('href', '/last-step');
 	});
 	test('Should render a link with icon', () => {
 		const { getByRole } = render(Breadcrumb, { items: BREADCRUMB_ITEMS_MOCK });
