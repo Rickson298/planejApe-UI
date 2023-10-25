@@ -25,6 +25,7 @@
 </script>
 
 <div
+	{...$$restProps}
 	style="display:flex"
 	style:justify-content={justifyContent}
 	style:flex-direction={direction}
@@ -34,7 +35,6 @@
 	style:gap
 	style:padding
 	style:height
-	{...$$restProps}
 >
 	<slot />
 </div>
