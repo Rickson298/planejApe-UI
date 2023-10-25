@@ -1,4 +1,5 @@
 <script lang="ts">
+	import type { ComponentType } from 'svelte';
 	import type { HTMLInputAttributes } from 'svelte/elements';
 	import { slide } from 'svelte/transition';
 
@@ -6,14 +7,16 @@
 	type $$Props = HTMLInputAttributes & {
 		helperText?: string;
 		value?: string;
+		rightIcon?: ComponentType;
 	};
 
 	export let value = '';
 	export let helperText = '';
+	export let rightIcon: ComponentType | undefined = undefined;
 </script>
 
 <fieldset>
-	<label>
+	<label class:has-right-icon={rightIcon}>
 		<input
 			on:input
 			data-alert={!!helperText}
@@ -25,6 +28,11 @@
 		{#if $$props.placeholder}
 			<span class="placeholder-custom">{$$props.placeholder}</span>
 		{/if}
+		{#if rightIcon}
+			<div class="right-icon">
+				<svelte:component this={rightIcon} size={24} />
+			</div>
+		{/if}
 	</label>
 	{#if helperText}
 		<small class="helper-text" transition:slide>{helperText}</small>
@@ -35,6 +43,22 @@
 	label {
 		position: relative;
 		width: 100%;
+
+		&.has-right-icon {
+			input {
+				padding-right: 2.75rem;
+			}
+		}
+
+		.right-icon {
+			color: var(--blue-300);
+			position: absolute;
+			right: 1rem;
+			top: 50%;
+			transform: translateY(-50%);
+			display: flex;
+			align-items: center;
+		}
 	}
 
 	.helper-text {
@@ -87,12 +111,16 @@
 		}
 
 		&:disabled {
+			~ .right-icon {
+				color: var(--blue-400);
+			}
+
 			border: 2px solid var(--blue-400);
 			background: var(--blue-500);
-			color: var(--blue-400);
+			color: var(--blue-300);
 			cursor: not-allowed;
 
-			+ .placeholder-custom {
+			~ .placeholder-custom {
 				opacity: 0.7;
 			}
 		}
