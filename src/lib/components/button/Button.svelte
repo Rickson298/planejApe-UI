@@ -20,7 +20,6 @@
 	on:click
 	{...$$restProps}
 >
-	<slot name="icon" />
 	<slot />
 </button>
 
@@ -37,6 +36,7 @@
 		border: none;
 		justify-content: center;
 		border: 2px solid transparent;
+		align-items: center;
 
 		&:active {
 			scale: 0.98;
