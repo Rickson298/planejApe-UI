@@ -27,8 +27,8 @@
 	<slot name="header" />
 
 	<tbody>
-		{#each data as item}
-			<slot {item} />
+		{#each data as item, index}
+			<slot item={{ ...item, index }} />
 		{/each}
 	</tbody>
 </table>
