@@ -49,7 +49,7 @@
 			width: 100%;
 			height: 100%;
 			background: inherit;
-			z-index: 2;
+			z-index: 1;
 		}
 
 		&::after {
@@ -61,7 +61,7 @@
 			width: 40%;
 			animation: wave 1.5s infinite;
 			top: -25%;
-			z-index: 3;
+			z-index: 1;
 		}
 
 		@keyframes wave {
