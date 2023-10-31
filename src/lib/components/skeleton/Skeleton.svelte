@@ -37,7 +37,7 @@
 
 <style lang="scss">
 	.skeleton {
-		background: var(--blue-500);
+		background: var(--blue-400);
 		height: fit-content;
 		max-width: 100%;
 		position: relative;
