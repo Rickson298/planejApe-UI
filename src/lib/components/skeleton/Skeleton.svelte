@@ -1,4 +1,6 @@
 <script lang="ts">
+	import { onMount } from 'svelte';
+
 	let skeletonElement: HTMLDivElement | null = null;
 
 	export let isLoading = false;
@@ -6,7 +8,7 @@
 	export let height = '';
 	export let background = '';
 
-	$: {
+	onMount(() => {
 		const firstChild = skeletonElement?.firstChild as HTMLElement;
 
 		const firstChildCSS = firstChild && window.getComputedStyle(firstChild);
@@ -16,7 +18,7 @@
 		if (skeletonElement) {
 			skeletonElement.style.borderRadius = firstChildBorderRadius;
 		}
-	}
+	});
 </script>
 
 {#if isLoading}
